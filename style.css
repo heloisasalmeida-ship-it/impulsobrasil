@@ -1,0 +1,831 @@
+
+/* =====================================
+   IMPULSO BRASIL - ESTILO DO SITE
+   Azul-marinho, azul-claro e dourado
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;500;600;700;800;900&family=Poppins:wght@400;500;600;700;800&display=swap');
+
+:root {
+    --azul-marinho: #083b78;
+    --azul-profundo: #052b59;
+    --azul: #0879dc;
+    --azul-claro: #e8f6ff;
+    --azul-suave: #FCE4EC;
+    --dourado: #ffcf32;
+    --dourado-claro: #fff4c5;
+    --branco: #ffffff;
+    --texto: #193754;
+    --texto-suave: #587087;
+    --verde-claro: #e4f8ed;
+    --sombra: 0 12px 35px rgba(8, 59, 120, 0.10);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Nunito Sans', sans-serif;
+    font-size: 17px;
+    line-height: 1.7;
+    color: var(--texto);
+    background: var(--branco);
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+h1, h2, h3 {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.2;
+    color: var(--azul-marinho);
+}
+
+p {
+    margin-top: 12px;
+}
+
+/* CABEÇALHO */
+
+.cabecalho {
+    width: 100%;
+    min-height: 88px;
+    padding: 16px 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+    background: var(--azul-marinho);
+    color: var(--branco);
+    border-bottom: 4px solid var(--dourado);
+}
+
+.logo {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--branco);
+    font-family: 'Poppins', sans-serif;
+    font-size: 25px;
+    font-weight: 800;
+    line-height: 1.1;
+}
+
+.logo strong {
+    color: var(--dourado);
+}
+
+.logo-simbolo {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    border-radius: 14px;
+    background: var(--dourado);
+    color: var(--azul-marinho);
+    font-size: 28px;
+    transform: rotate(-7deg);
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.menu a {
+    padding: 10px 18px;
+    border-radius: 30px;
+    color: var(--branco);
+    font-weight: 800;
+    transition: background 0.25s, color 0.25s;
+}
+
+.menu a:hover,
+.menu a.ativo {
+    background: var(--dourado);
+    color: var(--azul-marinho);
+}
+
+/* BOTÕES */
+
+.botao {
+    display: inline-block;
+    padding: 14px 23px;
+    border: 2px solid var(--dourado);
+    border-radius: 30px;
+    background: var(--dourado);
+    color: var(--azul-marinho);
+    font-weight: 900;
+    font-size: 16px;
+    text-align: center;
+    box-shadow: 0 5px 0 rgba(5, 43, 89, 0.12);
+    transition: transform 0.25s, box-shadow 0.25s, background 0.25s;
+}
+
+.botao:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 18px rgba(5, 43, 89, 0.18);
+    background: #ffdc63;
+}
+
+.botao-pequeno {
+    padding: 10px 17px;
+    font-size: 14px;
+}
+
+.botao-secundario {
+    background: var(--branco);
+    border-color: #c5e7ff;
+}
+
+.botao-secundario:hover {
+    background: var(--azul-claro);
+}
+
+.botao-branco {
+    background: var(--branco);
+    border-color: var(--branco);
+    color: var(--azul-marinho);
+}
+
+/* ETIQUETAS E TÍTULOS */
+
+.etiqueta {
+    display: inline-block;
+    padding: 6px 13px;
+    border-radius: 30px;
+    background: var(--dourado);
+    color: var(--azul-marinho);
+    font-size: 12px;
+    font-weight: 900;
+    letter-spacing: 1.2px;
+}
+
+.etiqueta-clara {
+    background: var(--branco);
+}
+
+.titulo-secao {
+    max-width: 760px;
+    margin: 0 auto 40px;
+    text-align: center;
+}
+
+.titulo-secao h2 {
+    margin-top: 18px;
+    font-size: clamp(30px, 4vw, 43px);
+}
+
+.titulo-secao h2 span,
+.hero h1 span,
+.sobre-hero h1 span {
+    color: var(--azul);
+}
+
+.titulo-secao > p {
+    color: var(--texto-suave);
+    font-size: 18px;
+}
+
+/* PÁGINA INICIAL */
+
+.hero {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    padding: 70px 7%;
+    overflow: hidden;
+    background:
+        radial-gradient(circle at 8% 10%, #d9f1ff 0, transparent 35%),
+        linear-gradient(135deg, #f7fcff, #e7f6ff);
+}
+
+.hero-conteudo {
+    max-width: 650px;
+}
+
+.hero h1 {
+    margin-top: 22px;
+    font-size: clamp(38px, 5vw, 61px);
+    font-weight: 900;
+    letter-spacing: -1.7px;
+}
+
+.hero-conteudo > p {
+    margin-top: 22px;
+    max-width: 560px;
+    color: var(--texto-suave);
+    font-size: 19px;
+}
+
+.hero-botoes {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 13px;
+    margin-top: 28px;
+}
+
+.frase-destaque {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 30px;
+    color: var(--azul-marinho);
+    font-weight: 800;
+}
+
+.frase-icone {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 33px;
+    height: 33px;
+    flex-shrink: 0;
+    border-radius: 50%;
+    background: var(--dourado);
+}
+
+.hero-imagem {
+    position: relative;
+    padding: 10px;
+    border: 3px solid var(--branco);
+    border-radius: 32px;
+    background: var(--branco);
+    box-shadow: var(--sombra);
+}
+
+.hero-imagem > img {
+    width: 100%;
+    height: 440px;
+    object-fit: cover;
+    border-radius: 24px;
+}
+
+.selo-imagem {
+    position: absolute;
+    bottom: 28px;
+    left: -25px;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: 290px;
+    padding: 16px 20px;
+    border: 2px solid var(--branco);
+    border-radius: 18px;
+    background: var(--dourado);
+    color: var(--azul-marinho);
+    box-shadow: var(--sombra);
+}
+
+.selo-imagem > span {
+    font-size: 30px;
+}
+
+.selo-imagem strong,
+.selo-imagem small {
+    display: block;
+}
+
+.selo-imagem strong {
+    font-family: 'Poppins', sans-serif;
+    line-height: 1.3;
+}
+
+.selo-imagem small {
+    margin-top: 4px;
+}
+
+.decoracao {
+    position: absolute;
+    color: var(--dourado);
+    font-size: 65px;
+}
+
+.decoracao-1 {
+    top: -25px;
+    right: 15px;
+}
+
+.decoracao-2 {
+    bottom: 25px;
+    right: -22px;
+}
+
+/* FAIXA COLORIDA */
+
+.faixa-mensagem {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 22px 45px;
+    padding: 23px 5%;
+    background: var(--azul-marinho);
+    color: var(--branco);
+    font-weight: 900;
+    font-size: 17px;
+}
+
+/* SEÇÕES E CARTÕES */
+
+.secao {
+    padding: 85px 7%;
+}
+
+.grade-cartoes {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 22px;
+}
+
+.cartao {
+    padding: 27px 24px;
+    border: 1px solid rgba(8, 59, 120, 0.06);
+    border-radius: 24px;
+    transition: transform 0.25s, box-shadow 0.25s;
+}
+
+.cartao:hover {
+    transform: translateY(-7px);
+    box-shadow: var(--sombra);
+}
+
+.cartao-azul {
+    background: var(--azul-claro);
+}
+
+.cartao-amarelo {
+    background: #fff7d9;
+}
+
+.cartao-rosa {
+    background: var(--rosa-claro);
+}
+
+.cartao-verde {
+    background: var(--verde-claro);
+}
+
+.cartao-icone {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 65px;
+    height: 65px;
+    margin-bottom: 20px;
+    border-radius: 20px;
+    background: var(--branco);
+    font-size: 32px;
+    box-shadow: 0 5px 15px rgba(8, 59, 120, 0.08);
+}
+
+.cartao h3 {
+    font-size: 21px;
+}
+
+.cartao p {
+    color: var(--texto-suave);
+    font-size: 16px;
+}
+
+/* FAIXA DE CHAMADA */
+
+.chamada {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 35px;
+    margin: 0 7% 75px;
+    padding: 45px;
+    border-radius: 30px;
+    background:
+        radial-gradient(circle at 95% 0%, #146ac0 0, transparent 35%),
+        var(--azul-marinho);
+    color: var(--branco);
+}
+
+.chamada h2 {
+    max-width: 700px;
+    margin-top: 17px;
+    color: var(--branco);
+    font-size: clamp(28px, 3.5vw, 40px);
+}
+
+.chamada p {
+    max-width: 620px;
+    color: #e1efff;
+    font-size: 17px;
+}
+
+/* PÁGINA SOBRE */
+
+.sobre-hero {
+    display: grid;
+    grid-template-columns: 1.2fr 0.8fr;
+    align-items: center;
+    gap: 50px;
+    padding: 65px 7%;
+    background: linear-gradient(135deg, #e8f6ff, #ffffff);
+}
+
+.sobre-hero h1 {
+    margin-top: 20px;
+    font-size: clamp(38px, 5vw, 56px);
+}
+
+.sobre-hero > div:first-child > p {
+    max-width: 700px;
+    color: var(--texto-suave);
+    font-size: 19px;
+}
+
+.sobre-frase {
+    padding: 32px;
+    border-radius: 28px;
+    background: var(--dourado);
+    box-shadow: var(--sombra);
+    transform: rotate(2deg);
+}
+
+.sobre-frase > span {
+    font-size: 40px;
+}
+
+.sobre-frase h2 {
+    margin-top: 12px;
+    font-size: 29px;
+}
+
+.sobre-frase p {
+    font-weight: 700;
+}
+
+.sobre-imagem {
+    position: relative;
+    margin: 45px 7% 0;
+}
+
+.sobre-imagem img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+    border-radius: 28px;
+}
+
+.sobre-legenda {
+    position: absolute;
+    right: 22px;
+    bottom: 22px;
+    max-width: 470px;
+    padding: 20px 25px;
+    border-radius: 18px;
+    background: var(--branco);
+    color: var(--azul-marinho);
+    font-family: 'Poppins', sans-serif;
+    font-size: 18px;
+    box-shadow: var(--sombra);
+}
+
+.grade-sobre {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+}
+
+.grade-sobre .cartao {
+    padding: 32px;
+}
+
+.grade-sobre .cartao p {
+    font-size: 17px;
+}
+
+.slogan-destaque {
+    color: var(--azul-marinho) !important;
+    font-family: 'Poppins', sans-serif;
+    font-size: 21px !important;
+    font-weight: 800;
+}
+
+/* LISTA DE VALORES */
+
+.secao-valores {
+    background: var(--azul-suave);
+}
+
+.lista-valores {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 16px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.valor {
+    display: flex;
+    align-items: flex-start;
+    gap: 17px;
+    padding: 23px;
+    border: 1px solid #dcefff;
+    border-radius: 20px;
+    background: var(--branco);
+    transition: transform 0.25s, border-color 0.25s;
+}
+
+.valor:hover {
+    transform: translateY(-4px);
+    border-color: var(--dourado);
+}
+
+.valor > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 43px;
+    height: 43px;
+    flex-shrink: 0;
+    border-radius: 14px;
+    background: var(--dourado);
+    color: var(--azul-marinho);
+    font-weight: 900;
+}
+
+.valor h3 {
+    font-size: 19px;
+}
+
+.valor p {
+    margin-top: 5px;
+    color: var(--texto-suave);
+    font-size: 15px;
+}
+
+/* RODAPÉ */
+
+.rodape {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 32px 6%;
+    background: var(--azul-profundo);
+    color: var(--branco);
+}
+
+.logo-rodape {
+    font-size: 21px;
+}
+
+.logo-rodape .logo-simbolo {
+    width: 36px;
+    height: 36px;
+    font-size: 23px;
+}
+
+.rodape p {
+    margin: 0;
+    color: #e0edff;
+    font-size: 14px;
+}
+
+.rodape a:not(.logo) {
+    color: var(--dourado);
+    overflow-wrap: anywhere;
+}
+
+.rodape a:not(.logo):hover {
+    text-decoration: underline;
+}
+
+/* RESPONSIVIDADE PARA TABLETS */
+
+@media (max-width: 1050px) {
+    .cabecalho {
+        padding: 16px 4%;
+        gap: 15px;
+    }
+
+    .logo {
+        font-size: 21px;
+    }
+
+    .menu {
+        gap: 4px;
+    }
+
+    .menu a {
+        padding: 9px 12px;
+    }
+
+    .hero,
+    .sobre-hero {
+        gap: 30px;
+        padding: 55px 5%;
+    }
+
+    .hero-imagem > img {
+        height: 360px;
+    }
+
+    .grade-cartoes {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .secao {
+        padding: 65px 5%;
+    }
+
+    .chamada {
+        margin-right: 5%;
+        margin-left: 5%;
+    }
+}
+
+/* RESPONSIVIDADE PARA CELULARES */
+
+@media (max-width: 700px) {
+    body {
+        font-size: 16px;
+    }
+
+    .cabecalho {
+        flex-wrap: wrap;
+        justify-content: center;
+        padding: 18px 5%;
+    }
+
+    .cabecalho .logo {
+        width: 100%;
+        justify-content: center;
+        font-size: 25px;
+    }
+
+    .menu {
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .menu a {
+        padding: 9px 14px;
+        font-size: 15px;
+    }
+
+    .botao-pequeno {
+        display: none;
+    }
+
+    .hero,
+    .sobre-hero {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        padding: 45px 6%;
+    }
+
+    .hero h1,
+    .sobre-hero h1 {
+        font-size: clamp(35px, 9vw, 47px);
+        letter-spacing: -1px;
+    }
+
+    .hero-conteudo > p,
+    .sobre-hero > div:first-child > p {
+        font-size: 17px;
+    }
+
+    .hero-botoes {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .hero-botoes .botao {
+        width: 100%;
+    }
+
+    .hero-imagem > img {
+        height: 310px;
+    }
+
+    .selo-imagem {
+        left: 8px;
+        bottom: 20px;
+        max-width: calc(100% - 35px);
+        padding: 12px 14px;
+    }
+
+    .decoracao {
+        font-size: 45px;
+    }
+
+    .faixa-mensagem {
+        gap: 12px;
+        padding: 20px 5%;
+        font-size: 15px;
+    }
+
+    .secao {
+        padding: 55px 6%;
+    }
+
+    .titulo-secao {
+        margin-bottom: 30px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 31px;
+    }
+
+    .titulo-secao > p {
+        font-size: 16px;
+    }
+
+    .grade-cartoes,
+    .grade-sobre,
+    .lista-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .cartao,
+    .grade-sobre .cartao {
+        padding: 25px;
+    }
+
+    .chamada {
+        flex-direction: column;
+        align-items: flex-start;
+        margin: 0 5% 50px;
+        padding: 30px 25px;
+        border-radius: 24px;
+    }
+
+    .chamada h2 {
+        font-size: 30px;
+    }
+
+    .sobre-frase {
+        transform: none;
+    }
+
+    .sobre-imagem {
+        margin: 25px 5% 0;
+    }
+
+    .sobre-imagem img {
+        height: 300px;
+    }
+
+    .sobre-legenda {
+        position: static;
+        max-width: none;
+        margin-top: 12px;
+        font-size: 16px;
+    }
+
+    .valor {
+        padding: 18px;
+    }
+
+    .rodape {
+        flex-direction: column;
+        text-align: center;
+        padding: 30px 6%;
+    }
+}
+
+/* TELAS MUITO PEQUENAS */
+
+@media (max-width: 380px) {
+    .hero h1,
+    .sobre-hero h1 {
+        font-size: 32px;
+    }
+
+    .logo {
+        font-size: 22px;
+    }
+
+    .hero-imagem > img {
+        height: 250px;
+    }
+
+    .cartao-icone {
+        width: 55px;
+        height: 55px;
+    }
+}

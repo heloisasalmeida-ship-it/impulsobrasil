@@ -1,0 +1,86 @@
+
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Impulso IA | Impulso Brasil</title>
+    <link rel="stylesheet" href="styleChatBot.css">
+</head>
+<body>
+
+    <a href="index.html" class="voltar">
+    ← Voltar ao site
+</a>
+
+    <main class="pagina">
+        <section class="chat-container">
+
+            <div class="chat-header">
+                <div class="avatar">IA</div>
+                <div>
+                    <h1>Impulso IA</h1>
+                    <p>Assistente virtual da Impulso Brasil</p>
+                </div>
+            </div>
+
+            <div class="boas-vindas">
+                <h2>Olá! Seja bem-vindo(a)! 💙</h2>
+                <p>
+                    Sou a Impulso IA. Estou aqui para ajudar com dúvidas
+                    sobre inclusão juvenil, aprendizagem, projetos,
+                    oportunidades e desenvolvimento profissional.
+                </p>
+            </div>
+
+            <div class="campo-api">
+                <label for="apiKey">Chave da API OpenAI</label>
+                <input
+                    type="password"
+                    id="apiKey"
+                    placeholder="Cole sua chave da API aqui"
+                    autocomplete="off"
+                >
+                <small>
+                    Não compartilhe sua chave nem publique este projeto
+                    com ela preenchida.
+                </small>
+            </div>
+
+            <div id="historico" class="historico">
+                <div class="mensagem bot">
+                    <strong>Impulso IA</strong>
+                    <p>Como posso ajudar você hoje? 😊</p>
+                </div>
+            </div>
+
+            <form id="formChat" class="area-envio">
+                <textarea
+                    id="mensagem"
+                    placeholder="Digite sua mensagem..."
+                    rows="2"
+                    required
+                ></textarea>
+
+                <button type="submit" id="btnEnviar">
+                    Enviar ➤
+                </button>
+            </form>
+
+            <div class="controles">
+                <p id="aviso">Pronta para conversar!</p>
+                <button type="button" id="btnLimpar">
+                    Limpar conversa
+                </button>
+            </div>
+
+        </section>
+    </main>
+
+    <footer>
+        © 2026 Impulso Brasil | O futuro começa com a voz dos jovens.
+    </footer>
+
+    <script src="scriptChat.js"></script>
+</body>
+</html>
